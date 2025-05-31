@@ -50,19 +50,19 @@ You will be prompted to set or enter your master password on first use.
 
 ```
 password-manager/
-├── password_manager.py      # Main CLI logic
-├── storage.py              # Encrypted storage management
-├── crypto_utils.py         # Encryption/decryption helpers
-├── requirements.txt        # Project dependencies
-├── .gitignore              # Ignored files and folders
-└── README.md               # This file
+├── password_manager.py
+├── storage.py
+├── crypto_utils.py
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ## Security Notice
 
 - All passwords are encrypted locally using your master password.
 - **Do not lose your master password!** There is no way to recover your vault without it.
-- Be careful not to upload your encrypted vault or master password to any public repository.
+- Be careful not to upload your encrypted vault or master password.
 
 ## License
 
