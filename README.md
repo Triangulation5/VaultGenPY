@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-# VaultGenPY
-=======
-# Python Password Manager
+# VaultGen
 
-A simple and secure command-line password manager written in Python. Store, retrieve, and manage your passwords with encryption, all from your terminal.
+A simple and secure command-line password manager and password generator written in Python. Store, retrieve, and generate strong passwords with encryption, all from your terminal.
 
 ## Features
 
 - Securely store passwords for multiple sites and accounts
 - All data is encrypted using a master password
+- Built-in strong password generator with customizable options
 - Easy-to-use command-line interface
 - Quickly add, retrieve, and list your stored accounts
 
@@ -23,8 +21,8 @@ A simple and secure command-line password manager written in Python. Store, retr
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/password-manager.git
-   cd password-manager
+   git clone https://github.com/yourusername/VaultGen.git
+   cd VaultGen
    ```
 
 2. **(Recommended) Create a virtual environment**
@@ -35,6 +33,7 @@ A simple and secure command-line password manager written in Python. Store, retr
    ```
 
 3. **Install required packages**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -44,7 +43,7 @@ A simple and secure command-line password manager written in Python. Store, retr
 Run the password manager from the command line:
 
 ```bash
-python password_manager.py
+python -m vaultgen.password_manager
 ```
 
 You will be prompted to set or enter your master password on first use.
@@ -52,13 +51,16 @@ You will be prompted to set or enter your master password on first use.
 ## Project Structure
 
 ```
-password-manager/
+vaultgen/
+├── __init__.py
 ├── password_manager.py
 ├── storage.py
 ├── crypto_utils.py
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── password_generator.py
+requirements.txt
+README.md
+LICENSE
+.gitignore
 ```
 
 ## Security Notice
@@ -73,5 +75,4 @@ MIT License
 
 ---
 
-**Enjoy your simple and secure password manager!**
->>>>>>> pm/main
+**Enjoy your secure and flexible password management with VaultGen!**

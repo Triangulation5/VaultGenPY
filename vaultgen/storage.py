@@ -1,7 +1,7 @@
 import json
 import os
 from typing import Optional, Dict
-from crypto_utils import encrypt, decrypt, generate_salt
+from .crypto_utils import encrypt, decrypt, generate_salt
 
 VAULT_FILE = "vault.bin"
 SALT_FILE = "vault.salt"
