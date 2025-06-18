@@ -6,7 +6,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.fernet import Fernet
 
 def derive_key(password: str, salt: bytes) -> bytes:
-    """Derives a symmetric key from the password and salt."""
+    # Derives a symmetric key from the password and salt.
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
         length=32,
@@ -17,17 +17,17 @@ def derive_key(password: str, salt: bytes) -> bytes:
     return base64.urlsafe_b64encode(kdf.derive(password.encode()))
 
 def generate_salt() -> bytes:
-    """Generates a new salt."""
+    # Generates a new salt.
     return os.urandom(16)
 
 def encrypt(data: bytes, password: str, salt: bytes) -> bytes:
-    """Encrypts data using the password and salt."""
+    # Encrypts data using the password and salt.
     key = derive_key(password, salt)
     f = Fernet(key)
     return f.encrypt(data)
 
 def decrypt(token: bytes, password: str, salt: bytes) -> bytes:
-    """Decrypts data using the password and salt."""
+    # Decrypts data using the password and salt.
     key = derive_key(password, salt)
     f = Fernet(key)
     return f.decrypt(token)
